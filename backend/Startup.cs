@@ -41,6 +41,8 @@ namespace Commander
         app.UseDeveloperExceptionPage();
       }
 
+      app.UseCors(opt => opt.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+
       app.UseHttpsRedirection();
 
       app.UseRouting();
