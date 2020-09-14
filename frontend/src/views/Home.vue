@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div>
     <header>
-      Commander
+      <Title text="Commander" />
 
       <router-link class="new" to="/new">New</router-link>
     </header>
@@ -17,24 +17,23 @@
 <script lang="ts">
 import { mapState } from 'vuex';
 import Vue from 'vue';
+
 import Command from '../components/Command.vue';
 import HeaderTable from '../components/HeaderTable.vue';
+import Title from '../components/Title.vue';
 
 export default Vue.extend({
   name: 'Home',
-  components: { Command, HeaderTable },
+  components: { Command, HeaderTable, Title },
   computed: {
     ...mapState(['commands']),
   },
 });
 </script>
 
-<style lang="scss">
-.home {
-  margin-top: 80px;
-}
-
+<style lang="scss" scoped>
 header {
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,11 +43,13 @@ header {
 }
 
 .new {
+  width: 100px;
   border-radius: 8px;
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
   background: #41b883;
   color: #34495e;
+  text-align: center;
 }
 </style>

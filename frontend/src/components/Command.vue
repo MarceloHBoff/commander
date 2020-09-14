@@ -16,8 +16,9 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { Command } from '../@types';
 import Clipboard from 'v-clipboard';
+
+import { Command } from '../@types';
 
 Vue.use(Clipboard);
 
@@ -41,7 +42,7 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .command {
   margin-top: 10px;
   padding: 10px;
